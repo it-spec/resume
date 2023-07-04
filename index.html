@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexey A. SHaruk</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/b4ed5a698b.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <div class="logo"><strong>IT</strong>support.</div>
+            
+            <button class="dark-mode-btn">
+                <img src="./img/sun.svg" alt="Light mode" class="dark-mode-btn-icon">
+                <img src="./img/moon.svg" alt="Dark mode" class="dark-mode-btn-icon">
+            </button>
+            
+            <ul id="sidemenu">
+                <li><a href="#about"  onclick="closemenu()">Начало</a></li>
+                <li><a href="#projects"  onclick="closemenu()">Проекты</a></li>
+                <li><a href="#contact"  onclick="closemenu()">Контакты</a></li>
+                
+                <i class="fas fa-times" style="color: #fff;" onclick="closemenu()"></i>
+                
+            </ul>
+
+            <i class="fas fa-bars" style="color: #fff;" onclick="openmenu()"></i>
+            
+        </nav>
+    </div>
+</div>
+
+
+
+
+<!-- About Me ---------------------------------------------------------------->
+
+<div id="about">
+    <div class="container" id="particle-canvas">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="./img/photo.png" alt="myPhoto">
+            </div>
+            <div class="about-col-2">
+
+                <div class="header-text">
+                    <h1>Привет! Я&nbsp;<span><strong>Алексей</strong></span>.</h1>
+                    <div class="scramble-text">Специалист по ИТ, Дизайнер</div>
+                </div>
+                <p>
+                    Основная моя специализация это Специалист по информационным технологиям. 
+                    Очень часто мне приходится заниматся разработкой дизайна полиграфической продукции, интерфейсов пользователей, разроботкой логотипов 
+                    а так-же программированием на различных языках и платформах.
+                </p>
+
+                <a class="tab-CV hide" href="./doc/sharuk_a_CV.pdf" download>Скачать&nbsp;CV</a>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')"><b>Умения</b></p>
+                    <p class="tab-links" onclick="opentab('experience')"><b>Опыт</b></p>
+                    <p class="tab-links" onclick="opentab('education')"><b>Образование</b></p>
+                    <p class="tab-links" onclick="opentab('personal')"><b>Личное</b></p>
+                    <a class="tab-links" href="./doc/sharuk_a_CV.pdf" download>Скачать&nbsp;CV</a>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <h1 class="sub-title hide">Умения</h1>
+                    <ul>
+                        <li><span>Графический дизайн</span><br>Часто приходится разрабатывать дизайн полиграфической продукции, такой как баннера, кружки, логотипы и прочее.<br>
+                            Используемые приложения:<b> Corel Draw, Adobe Illustrator, Adobe Photoshop</b>
+                        </li>
+                        <li><span>Веб-дизайн</span><br>Разработка дизайна веб-страниц и сайтов. Сочетания цветов и шрифтов<br>
+                            Используемые приложения:<b> Corel Draw, Adobe Illustrator, Adobe Photoshop, Figma</b>
+                        </li>
+                        <li><span>Веб-разработчик</span><br>У меня мало в этом опыта, часто этим я не занимаюсь, 
+                        но тем не менее, к примеру, эту страницу написал я сам.<br>
+                            Используемые технологии:<b> HTML, CSS, JavaScript</b> (редко), <b>PHP</b> (редко),<b> Django</b> (использовал 1 раз)
+                        </li>
+                        <li><span>Разработчик ПО</span><br>Как любой ИТ специалист, я изучал программирование в ВУЗе и даже учавствовал в разработке компьютерных игр. 
+                            Основной моей специализацией это не стало, поэтому пишу программы только по необходимости.<br>
+                            Используемые языки:<b> 1С, C#, CQL, C++, Python</b> и много других, всего не вспомнить.
+                        </li>
+                        <li><span>3D моделирование</span><br>Периодически занимаюсь 3D моделированием.<br>
+                            Используемые приложения:<b> 3D Max, Blender3D, Allegorithmic Substance Painter</b>
+                        </li>
+                        <li><span>Экономика и Бухгалтерский учет</span><br>Да-да, был период в моей жизни когда я вел ежедневную бухгалтерию ТОО и даже сдавал отчеты в Стат.управление. 
+                            Так-же я целый год исполнял обязаности Главного экономиста: делал калькуляции, расчитывал стоимость товаров (молоко, масло, хлеб, зерно и др.), расчитывал зарплаты (более 600 человек) и пр.</b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <h1 class="sub-title hide">Опыт</h1>
+                    <ul>
+                        <li><span>06.2022 - по Т.М.</span><br> ИП Безгачева О.А. как <b>Специалист по ИТ</b></li>
+                        <li><span>09.2021 - 06.2022</span><br> ТОО «Navistar Asia» как <b>Системный администратор</b> и <b>Руководитель отдела информатизации</b></li>
+                        <li><span>10.2018 - 06.2021</span><br> ТОО Агрофирма «Родина» как <b>Экономист</b> и <b>Сметчик</b></li>
+                        <li><span>06.2014 - 10.2018</span><br> ТОО «NL technology» отделение в г. Кокшетау как <b>Разработчик</b> и <b>Дизайнер</b></li>
+                        <li><span>12.2011 - 06.2014</span><br> ДБ АО «Банк Хоум Кредит» филлиал в г. Кокшетау как <b>Специалист по ИТ</b></li>
+                        <li><span>02.2003 - 11.2011</span><br> ТОО «ЭкспрессПринт» как <b>Дизайнер</b> и <b>Помощник директора</b></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <h1 class="sub-title hide">Образование</h1>
+                    <ul>
+                        <li><span>2015</span><br> НАЧОУ ВПО «Современная Гуманитарная Академия».<br><b>Магистр информатики и вычислительной техники</b></li>
+                        <li><span>2005</span><br> ВУЗ «Кокшетауский институт экономики и менеджмента».<br><b>Специалист по информационным системам в экономике</b></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="personal">
+                    <h1 class="sub-title hide">Личное</h1>
+                    <ul>
+                        <!--<li>Возраст: <span>40</span> <b>лет</b> (февраль 1983 г.)</li>-->
+                        <li>Возраст: <span><text id="age"></text></span><b> <text id="ending">2</text></b> (февраль 1983 г.)</li>
+                        <li>Водительские права: <b>категория&nbsp;</b><span>В</span></li>
+                        <li>Семейное положение: <span>Холост</span>, есть <b>дети</b></li>
+                        <li>Увлечения: <b>спорт, компьютерные игры, музыка, кино</b></li>                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Projects ---------------------------------------------------------------->
+
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">Проекты</h1>
+        <div>
+            
+        </div>
+
+    </div>
+</div>
+
+<!-- Contact ----------------------------------------------------------------->
+
+<div id="contact">
+    <div class="container">
+        <h1 class="sub-title">Свяжитесь со мной</h1>
+        <div class="row">
+            <div class="contact-left">
+                <p><i class="fa-solid fa-paper-plane"></i> sharuk_alexey@mail.ru</p>
+                <p><i class="fa-solid fa-phone"></i> +7-705-8713410 (WhatsApp)</p>
+                <!-- <a href="./doc/sharuk_a_CV.pdf" download class="btn btn2">Скачать CV</a> -->
+
+                <div id="QR">
+
+                        <div class="work">
+                            <img src="./img/https _it-spec.github.io_resume.png" alt="">
+                            <div class="layer">
+                                <p><b>Отсканируйте этот QR код с помощью телефона для перехода</b></p>
+                            </div>
+                        </div>
+               
+                </div>
+
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="name" placeholder="Ваше Имя *" required>
+                    <input type="email" name="email" placeholder="Ваш E-mail *" required>
+                    <textarea name="message" rows="6" placeholder="Ваше Сообщение"></textarea>
+                    <button type="submit" class="btn btn2">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal ------------------------------------------------------------------->
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <p>Ваше сообщение отправлено.</p>
+    </div>
+</div>
+
+<!-- Footer ------------------------------------------------------------------>
+
+<div class="footer">
+        <p>Copyright © Alexey A. SHaruk. <br> Сделано с <strong><i class="fa-solid fa-heart"></i></strong> собственными руками. v.3.6.</p>
+</div>
+
+<!-- Scripts ----------------------------------------------------------------->
+
+<script src="./js/abouttab.js"></script>
+<script src="./js/scrample.js"></script>
+<script src="./js/sendmessage.js"></script>
+<script src="./js/darkmode.js"></script>
+<script src="./js/menu.js"></script>
+<script src="./js/age.js"></script>
+
+</body>
+</html>
