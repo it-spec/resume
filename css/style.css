@@ -6,9 +6,9 @@
 font-family: 'Montserrat', sans-serif;
 */
 
-/** {
+/* * {
     border: 1px solid red;
-}*/
+} */
 
 :root {
 
@@ -81,7 +81,7 @@ h1 span {
 
     position: fixed;
     width: 100%;
-    z-index: 1;    
+    z-index: 2;    
 }
 
 #header .container {
@@ -113,7 +113,6 @@ nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 15px;
-
 }
 
 nav ul li a {
@@ -216,8 +215,8 @@ nav .fas {
 
 .about-col-1 img {
     width: 100%;
-    -webkit-filter: drop-shadow(3px 5px 5px var(--shadow-white));
-    filter: drop-shadow(3px 5px 5px var(--shadow-white));
+    /*-webkit-filter: drop-shadow(3px 5px 5px var(--shadow-white));*/
+    /*filter: drop-shadow(3px 5px 5px var(--shadow-white));*/
 }
 
 .about-col-2 {
@@ -374,6 +373,17 @@ nav .fas {
     background: var(--accent-dark);
     color: var(--text-);
 }
+
+/* Card =====================================================================*/
+
+
+
+
+
+
+
+
+
 
 /* Contact ==================================================================*/
 
