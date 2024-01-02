@@ -38,8 +38,8 @@ html {
 }
 
 body {
-    background-image: linear-gradient(to top, var(--background), var(--background2));
-    /*background: var(--background);*/
+    /*background-image: linear-gradient(to top, var(--background), var(--background2));*/
+    background: var(--background);
     color: var(--text);
     scroll-behavior: smooth;
     scroll-padding-top: 47px;
