@@ -57,11 +57,12 @@ class TextScramble {
 }
 
 const phrases = [
-   'Специалист по ИТ',
+    'Специалист по ИТ',
 	'Дизайнер UX/UI',
 	'Графический Дизайнер',
     'Иногда Веб-разработчик',
-    'Иногда Программист'
+    'Иногда Программист',
+    'Часто - Специалист по непонятным вопросам'
 ]
 const el = document.querySelector('.scramble-text')
 const fx = new TextScramble(el)

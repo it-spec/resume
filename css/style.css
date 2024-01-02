@@ -6,29 +6,30 @@
 font-family: 'Montserrat', sans-serif;
 */
 
-/* * {
+ /** {
     border: 1px solid red;
-} */
+}*/
 
 :root {
-
-    --background-white: #fff;
-    --text-white: #161616;
-    --accent-white: #b53234;
-    --shadow-white: #161616;
-
-    --background-dark: #b53234;
-    --text-dark: #fff;
-    --text-accent-dark: #161616;
-    --accent-dark: #ad2123;    
+    --background: #1e1e2e;
+    --background2: #0f0f18;
+    --text: #fff;
+    /*--accent: #b53234;*/
+    --accent: #313244;
+    --lite: #8b8bac;  
 }
 
 * {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
     box-sizing: border-box;
+    line-height: 1.8;
+}
+
+::selection {
+    background: var(--lite);
+    color: var(--text);
 }
 
 html {
@@ -37,73 +38,123 @@ html {
 }
 
 body {
-    background: var(--background-white);
-    color: var(--text-white);
+    background-image: linear-gradient(to top, var(--background), var(--background2));
+    /*background: var(--background);*/
+    color: var(--text);
     scroll-behavior: smooth;
     scroll-padding-top: 47px;
 }
 
-a, a:link, a:visited {
+accent {
+    /*color: var(--accent);*/
+    font-weight: 700;
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
     text-decoration: none;
+    color: var(--lite);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0 10px;
+}
+
+a:link {
+
+}
+
+a:visited {
     /*color: inherit;*/
+    color: var(--lite);
 }
 
 a:hover {
-    color: inherit;
-    text-decoration: none;
+    /*text-decoration: none;*/
+    /*color: inherit;*/    
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 40px;
+}
+
+h1 strong {
+    font-size: 60px;
 }
 
 h1 span {
-    color: var(--accent-white);
+    color: var(--accent);
+}
+
+ul li {
+    font-size: 18px;
 }
 
 .container {
-    padding: 20px 10%;
+    padding: 5px 20%;
+}
+
+#me {
+    padding: 0px 30px 15px 30px;
+}
+
+#skills,
+#experience,
+#education,
+#personal,
+#projects {
+    background-color: var(--accent);
+    border-radius: 5px;
+    padding: 0px 30px 15px 30px;
 }
 
 .header-text {
     font-size: 30px;
-    padding-bottom: 30px;
 }
 
-
-.header-text h1 {
-    font-size: 60px;
-    font-weight: inherit;
+span {
+    color: var(--lite);
+    font-weight: 700;
 }
+
+/* Snow */
+
+.sf-snow-flake {
+    position: fixed;
+    top: -20px;
+    z-index: 99999;
+  }
+  .sf-snow-anim {
+    top: 110%;
+  }
 
 /* Navigation ===============================================================*/
 
 #header {
-    background-color: var(--accent-white);
-    border-bottom: 2px solid var(--accent-dark);
-    color: var(--text-dark);
-
-    position: fixed;
-    width: 100%;
-    z-index: 2;    
-}
-
-#header .container {
-    padding: 8px 10%;
-
+    background-color: var(--accent);
+    color: #fff;
+    width: 100%;    
 }
 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;    
+    flex-wrap: wrap; 
+    padding: 0px calc(20% + 20px);   
 }
 
 nav .logo {
     font-size: 24px;
-    color: var(--text-dark);
+    color: var(--text);
     margin-right: auto;
 }
 
 nav .logo strong {
-    color: var(--shadow-white);
+    color: var(--background);
     font-size: 24px;
     font-weight: 700;
     margin-right: auto;
@@ -112,25 +163,21 @@ nav .logo strong {
 nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 10px 15px;
+    margin: 10px;
 }
 
 nav ul li a {
-
-}
-
-nav ul li a {
-    color: var(--text-dark);
     text-decoration: none;
     font-size: 18px;
     position: relative;
+    font-weight: 400;
 }
 
 nav ul li a::after {
     content: "";
     width: 0%;
     height: 3px;
-    background: var(--text-dark);
+    background: var(--text);
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -147,201 +194,103 @@ nav .fas {
     display: none;
 }
 
-/* Кнопка Dark mode =========================================================*/
-
-.dark {
-    --background-white: #161616;
-    --text-white: #fff;
-}
-
-.dark-mode-btn {
-    order: 9;
-    position: relative;
-    border: 0px;
-    display: flex;
-    justify-content: space-between;
-    width: 51px;
-    height: 26px;
-    background-color: var(--accent-dark);
-    border-radius: 50px;
-    padding: 5px;
-}
-
-.dark-mode-btn::before {
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    content: "";
-    display: block;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: var(--text-dark);   
-    transition: left 0.2s ease-in; 
-}
-
-.dark-mode-btn-active::before {
-    left: 26px;
-}
-
-.dark-mode-btn-icon {
-    position: relative;
-    z-index: 1;
-}
-
 /* Scrample text ============================================================*/
 
 .scramble-text {
-    color: var(--accent-white);
-}
-
-/* About ====================================================================*/
-
-#about {
-    padding-top: 71px;
-    min-height: calc(100vh - 71px);
-    background: var(--background-white);
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.about-col-1 {
-    flex-basis: 40%;
-}
-
-.about-col-1 img {
-    width: 100%;
-    /*-webkit-filter: drop-shadow(3px 5px 5px var(--shadow-white));*/
-    /*filter: drop-shadow(3px 5px 5px var(--shadow-white));*/
-}
-
-.about-col-2 {
-    flex-basis: 55%;
-}
-
-.about-col-2 .header-text h1 span strong {
-    font-size: 50px;
-}
-
-.sub-title {
-    font-size: 40px;
-    font-weight: 700;
-    color: var(--accent-white);
-    padding-bottom: 20px;
-}
-
-.tab-titles {
-    display: flex;
-    margin: 40px 0 40px;
-}
-
-.tab-CV {
-    color: var(--accent-white);
-    margin: 0 auto;
-    font-weight: 700;
-    text-align: center;
-
-}
-
-.tab-titles a {
-    margin-right: 20px;
+    color: var(--text);
     font-size: 18px;
-    cursor: pointer;
-    position: relative;
-    font-weight: 700;
-    color: var(--accent-white);
-    text-decoration: none;
-}
-
-.tab-links {
-    margin-right: 20px;
-    font-size: 18px;
-    cursor: pointer;
-    position: relative;
-    font-weight: 700;
-}
-
-.tab-links::after {
-    content: "";
-    width: 0;
-    height: 3px;
-    background: var(--accent-white);
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}
-
-.tab-links.tab-links:hover::after {
-    width: 100%;
-}
-
-.tab-links.active-link::after {
-    width: 70%;
-}
-
-.tab-contents ul li {
-    list-style: none;
-    margin: 10px 0;
-}
-
-.tab-contents ul li span {
-    color: var(--accent-white);
-}
-
-.tab-contents {
-    display: none;
-}
-
-.tab-contents.active-tab {
-    display: block;
-}
-
-.hide {
-    display: none;
 }
 
 /* Ul-li line ===============================================================*/
 
+/* Убираю точки */
+#skills ul,
+#personal ul,
 #experience ul, 
 #education ul {
     list-style: none;
     position: relative;
 }
 
-#experience ul>li,
-#education ul>li {
+/*Выравниваю текст*/
+#skills ul li,
+#personal ul li,
+#experience ul li,
+#education ul li {
     padding-left: 40px;
     position: relative;
     margin: 10px 0;
 }
 
-#experience ul>li:before,
-#education ul>li:before {
+/* Большая точка */
+#skills ul li:before,
+#personal ul li:before,
+#experience>ul>li:before,
+#education>ul>li:before {
     content: '';
     position: absolute;
-    top: 7px;
+    top: 14px;
     left: 0;
     width: 9px;
     height: 9px;
-    background: var(--text-white);
+    background: var(--text);
     border-radius: 50%;
 }
 
-#experience ul>li:not(:last-child):after,
-#education ul>li:not(:last-child):after {
+#experience>ul>li:not(:last-child):after,
+#education>ul>li:not(:last-child):after
+ {
     content: '';
     position: absolute;
     top: 18px;
     left: 4px;
     width: 0px;
-    border-left: 1px dashed var(--text-white);
-    height: calc(100% + 0px);
+    border-left: 1px dashed var(--text);
+    height: calc(100% + 2px);
 }
+
+#skills ul li div,
+#personal ul li div,
+#experience ul li div,
+#education ul li div {
+    padding-left: 40px;
+    position: relative;
+}
+
+#experience>ul>li>div:not(:last-child):after,
+#education>ul>li>div:not(:last-child):after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 4px;
+    width: 15px;
+    height: 0px;
+    border-bottom: 1px dashed var(--text);
+    height: calc(100% + 2px);
+}
+
+#experience>ul>li>div:not(:last-child):before,
+#education>ul>li>div:not(:last-child):before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 4px;
+    width: 0px;
+    border-left: 1px dashed var(--text);
+    height: calc(100% + 2px);
+}
+
+#experience>ul>li>div>a,
+#education>ul>li>div>a {
+    background-color: var(--background);
+}
+
+#experience>ul>li>div>p,
+#education>ul>li>div>p {
+    font-size: 15px;
+}
+
+
 
 /* Btn ======================================================================*/
 
@@ -350,50 +299,42 @@ nav .fas {
     display: block;
     margin-bottom: 15px;
     width: fit-content;
-    border: 1px solid var(--accent-dark);
+    border: 2px solid var(--accent);
+    background: var(--background);
     padding: 15px 20px;
     border-radius: 6px;
     text-decoration: none;
-    color: var(--text-white);
-    transition: background 0.5s;
+    color: var(--text);
+    
     cursor: pointer;
-}
+    /*box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1);*/
 
-.btn.btn2 {
-    display: inline-block;
-    background: var(--text-accent-dark);
-    color: var(--text-dark);
+    transition: 0.5s;
 }
 
 .btn:hover {
-    background: var(--accent-dark);
-}
-
-.btn.btn2:hover {
-    background: var(--accent-dark);
-    color: var(--text-);
+    background: var(--accent);
+    color: var(--text);
+    /*box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.2);*/
+    /*0.2em 0.2em 0.7em var(--accent);*/
 }
 
 /* Card =====================================================================*/
 
 
-
-
-
-
-
-
-
-
 /* Contact ==================================================================*/
 
 #contact {
-    background: var(--background-dark);
-    color: var(--text-dark);
+    margin-top: 5px;
+    /*background: var(--accent);*/
+    padding-top: 5px;
+    
 }
 
-#contact h1 {
-    color: var(--text-dark);
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .contact-left {
@@ -402,7 +343,7 @@ nav .fas {
 
 .contact-left img {
     width: 150px;
-    background: var(--background-white);
+    background: var(--text);
     padding: 10px;
     border-radius: 5px;
 }
@@ -412,7 +353,6 @@ nav .fas {
 }
 
 .contact-left p i {
-    color: var(--text-dark);
     margin-right: 5px;
     font-size: 25px;
 }
@@ -430,8 +370,8 @@ form textarea {
     width: 100%;
     border: 0;
     outline: none;
-    background: var(--background-white);
-    color: var(--text-white);
+    color: var(--text);
+    background: var(--accent);
     border-radius: 6px;
     padding: 15px;
     font-size: 18px;
@@ -450,21 +390,20 @@ form textarea {
     border-radius: 5px;
     position: relative;
     overflow: hidden;
-    color: var(--text-dark);
-
+    color: var(--text);
 }
 
 .work img {
     border-radius: 6px;
     display: block;
     width: 150px;
-    background: #fff;
+    background: var(--text);
 }
 
 .layer {
     width: 150px;
     height: 0%;
-    background: var(--accent-dark);
+    background: var(--background);
     border-radius: 5px;
     position: absolute;
     left: 0;
@@ -477,9 +416,7 @@ form textarea {
 
 .layer p {
     margin-top: 15%;
-}
-
-.layer p b {
+    line-height: 1.7;
     font-size: 14px;
 }
 
@@ -502,16 +439,16 @@ form textarea {
 }
 
 .modal-content {
-    background-color: var(--background-white);
+    background-color: var(--background);
     margin: 20% auto;
     padding: 20px 50px;
-    border: 1px solid var(--accent-white);
+    border: 1px solid var(--accent);
     border-radius: 5px;
-    width: 370px;
+    width: 400px;
 }
 
 .modal-content p {
-    color: var(--text-white);
+    color: var(--text);
 }
 
 /* Footer ===================================================================*/
@@ -520,77 +457,52 @@ form textarea {
     width: 100%;
     color: var(--text);
     padding: 10px 0;
-    background: var(--background-white);
+    background: var(--accent);
 
     text-align: center;
     font-weight: 400;
 }
 
 .footer strong {
-    color: var(--accent-dark);
+    color: #b53234;
 }
 
 /* Adaptive =================================================================*/
 
 /* WideScreen 1200 */
 
-@media only screen and (max-width: 1240px) {
+/* Notebook 992 */
 
-    #about {
-        padding-top: 71px;
-    }
-
-    .about-col-1 {
-        flex-basis: 80%;
-        margin: 0 19%;
-        min-height: 0;
-    }
-
-    .about-col-2 {
-        flex-basis: 100%;
-        padding: 20px 0 20px;
-    }
+@media only screen and (max-width: 992px) {
 
     .contact-left,
     .contact-right {
         flex-basis: 100%;
     }
-}
 
-/* Notebook 992 */
+    .container {
+        padding: 5px 20px;
+    }
+
+    nav {
+        padding: 0px 20px;   
+    }
+}
 
 /* Pad 768 */
 
-@media only screen and (max-width: 790px) {
-
-    .container {
-        padding: 20px 20px;
-    }
+@media only screen and (max-width: 768px) {
 
     .header-text {
         font-size: 20px;
     }
 
-    .header-text h1 {
+    .header-text>h1 {
         font-size: 50px;
-    }
-
-    .about-col-1 {
-        margin-bottom: 5px;
-        flex-basis: 100%;
-        margin: 0 19%;
-    }
-
-    .about-col-2 {
-        font-size: 20px;
     }
 
     .sub-title {
         font-size: 30px;
-    }
-
-    .scramble-text {
-        padding-top: 20px;
     }
 }
 
@@ -598,40 +510,13 @@ form textarea {
 
 @media only screen and (max-width: 680px) {
 
-    .hide {
-        padding-top: 20px;
-        display: block;
-    }
-
-    .tab-titles {
-        display: none;
-    }
-
-    .tab-contents {
-        display: block;
-    }
-
-    .tab-titles {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .dark-mode-btn {
-        order: 0;
-        margin-right: 20px;
-    }
-
-        .tab-CV {
-            color: var(--accent-dark);  
-        }
-
     nav .fas {
         display: block;
         font-size: 25px;
     }
 
     nav ul {
-        background: var(--accent-dark);
+        background: var(--accent);
         position: fixed;
         top: 0;
         right: -50%;
@@ -640,6 +525,8 @@ form textarea {
         padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
+        box-shadow: inset 0em 0em 3em var(--background),
+            -0.01em 0em 5em var(--background);
     }
 
     nav ul li {
