@@ -62,7 +62,7 @@ const phrases = [
 	'Графический Дизайнер',
     'Иногда Веб-разработчик',
     'Иногда Программист',
-    'Часто - Специалист по непонятным вопросам'
+    'Специалист по непонятным вопросам'
 ]
 const el = document.querySelector('.scramble-text')
 const fx = new TextScramble(el)
