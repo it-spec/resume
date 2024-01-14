@@ -220,7 +220,7 @@ nav .fas {
     color: var(--red);
 }
 
-
+/* Image modal ==============================================================*/
 
 /* Ul-li line ===============================================================*/
 
@@ -343,7 +343,20 @@ nav .fas {
     /*0.2em 0.2em 0.7em var(--accent);*/
 }
 
-/* Gale =====================================================================*/
+/* hiden ====================================================================*/
+
+.el-scroll-hidden {
+    opacity: 0;
+    margin-top: -50px;
+}
+
+.element-scroll-show {
+    opacity: 1;
+    margin-top: 10px !important;
+    /*transition-property: opacity, margin-top;
+    transition-duration: 0.5s, 1s;*/
+    transition: 0.5s;
+}
 
 /* Contact ==================================================================*/
 
