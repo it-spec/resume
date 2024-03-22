@@ -19,17 +19,21 @@ font-family: 'Montserrat', sans-serif;
     /*--accent: #313244;*/
     /*--lite: #8b8bac;  */
 
-/*    --background: #918f92;*/
-/*    --text: #fff;*/
-/*    --accent: #5d5c61;*/
-/*    --lite: #363636; */
-/*    --red: #b53234; */
-
+/* Серое оформление */
     --background: #918f92;
     --text: #fff;
     --accent: #363636;
     --lite: #fff; 
-    --red: #b53234; 
+    /*--red: #b53234; */
+    --red: #ED0BD0; 
+
+    /*
+    --background: #7bc7eb;
+    --text: #fff;
+    --accent: #EC0BD0;
+    --lite: #fff; 
+    --red: #000;
+    */
 }
 
 * {
@@ -47,14 +51,23 @@ font-family: 'Montserrat', sans-serif;
 
 html {
     scroll-behavior: smooth;
-    /*scroll-padding-top: 47px;*/
+    scroll-padding-top: 10px;
 }
 
 body {
-    background: var(--background);
+    /*background: var(--background);*/
     color: var(--text);
     scroll-behavior: smooth;
     /*scroll-padding-top: 47px;*/
+
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 accent {
@@ -67,7 +80,7 @@ p {
 
 a {
     text-decoration: none;
-    color: var(--accent);
+    color: var(--text);
     font-size: 18px;
     font-weight: 700;
 }
@@ -78,12 +91,17 @@ a:link {
 
 a:visited {
     /*color: inherit;*/
-    color: var(--accent);
+    color: var(--text);
 }
 
 a:hover {
     /*text-decoration: none;*/
     /*color: inherit;*/    
+}
+
+#me a {
+    color: var(--text);
+    text-shadow: 1px 1px 2px var(--accent);
 }
 
 h1 {
@@ -104,20 +122,34 @@ ul li {
 }
 
 .container {
-    padding: 5px 20%;
+    padding: 10px 20%;
 }
 
 #me {
     padding: 0px 30px 15px 30px;
 }
 
+#me h1 {
+    text-shadow: 1px 1px 2px var(--accent);
+    color: var(--text);
+}
+
+#me p {
+    text-shadow: 1px 1px 2px var(--accent);
+    color: var(--text);
+    text-align: justify;
+}
+
 #skills,
 #experience,
 #education,
 #personal {
-    background-color: var(--accent);
-    border-radius: 5px;
+    /*background-color: var(--accent);*/
+    border-radius: 10px;
     padding: 0px 30px 15px 30px;
+    backdrop-filter: blur(50px);
+    border: 1px solid var(--background);
+    box-shadow: inset 1px 1px 20px #333;
 }
 
 span {
@@ -147,6 +179,7 @@ span {
 
 .header-text {
     color: var(--accent);
+    padding-bottom: 15px;
 }
 
 nav {
@@ -164,7 +197,7 @@ nav .logo {
 }
 
 nav .logo strong {
-    color: var(--background);
+    color: var(--red);
     font-size: 24px;
     font-weight: 700;
     margin-right: auto;
@@ -212,7 +245,7 @@ nav .fas {
 /* Scrample text ============================================================*/
 
 .scramble-text {
-    color: var(--accent);
+    color: var(--text);
     font-size: 18px;
 }
 
@@ -308,9 +341,11 @@ nav .fas {
 }
 
 #experience>ul>li>div>a,
-#education>ul>li>div>a {
-    background-color: var(--background);
-    padding: 0 10px;
+#education>ul>li>div>a, 
+#personal > ul > li > a {
+    /*background-color: var(--background);*/
+    color: var(--background);
+    /*padding: 0 10px;*/
 }
 
 #experience>ul>li>div>p,
@@ -326,7 +361,7 @@ nav .fas {
     margin-bottom: 15px;
     width: fit-content;
     border: 2px solid var(--accent);
-    background: var(--background);
+    background: var(--text);
     padding: 15px 20px;
     border-radius: 6px;
     text-decoration: none;
@@ -345,18 +380,16 @@ nav .fas {
 
 /* hiden ====================================================================*/
 
-.el-scroll-hidden {
+/*.el-scroll-hidden {
     opacity: 0;
     margin-top: -50px;
-}
+}*/
 
-.element-scroll-show {
+/*.element-scroll-show {
     opacity: 1;
     margin-top: 10px !important;
-    /*transition-property: opacity, margin-top;
-    transition-duration: 0.5s, 1s;*/
     transition: 0.5s;
-}
+}*/
 
 /* Contact ==================================================================*/
 
@@ -364,6 +397,11 @@ nav .fas {
     margin-top: 5px;
     /*background: var(--accent);*/
     padding-top: 5px;    
+}
+
+#contact h1 {
+    text-shadow: 1px 1px 2px var(--accent);
+    color: var(--text);
 }
 
 .row {
@@ -385,6 +423,8 @@ nav .fas {
 
 .contact-left p {
     margin-bottom: 15px;
+    /*color: var(--accent);*/
+    text-shadow: 1px 1px 2px var(--accent);
 }
 
 .contact-left p i {
