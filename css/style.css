@@ -27,13 +27,6 @@ font-family: 'Montserrat', sans-serif;
     /*--red: #b53234; */
     --red: #ED0BD0; 
 
-    /*
-    --background: #7bc7eb;
-    --text: #fff;
-    --accent: #EC0BD0;
-    --lite: #fff; 
-    --red: #000;
-    */
 }
 
 * {
@@ -560,11 +553,24 @@ form textarea {
 @media only screen and (max-width: 992px) {
 
     .container {
-        padding: 5px 20px;
+        padding: 10px 0px;
+    }
+
+    #contact {
+        padding: 0px 20px;
     }
 
     nav {
         padding: 0px 20px;   
+    }
+
+    #skills,
+    #experience,
+    #education,
+    #personal {
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
     }
 }
 
@@ -588,6 +594,10 @@ form textarea {
 /* Phone 600 */
 
 @media only screen and (max-width: 680px) {
+
+    #me p {
+        text-align: left;
+    }
 
     nav .fas {
         display: block;
