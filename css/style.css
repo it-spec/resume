@@ -69,6 +69,10 @@ accent {
 
 p {
     font-size: 18px;
+
+    text-shadow: 1px 1px 2px var(--accent);
+    color: var(--text);
+    text-align: justify;
 }
 
 a {
@@ -125,12 +129,6 @@ ul li {
 #me h1 {
     text-shadow: 1px 1px 2px var(--accent);
     color: var(--text);
-}
-
-#me p {
-    text-shadow: 1px 1px 2px var(--accent);
-    color: var(--text);
-    text-align: justify;
 }
 
 #skills,
@@ -531,6 +529,10 @@ form textarea {
     font-weight: 400;
 }
 
+.footer>p {
+    text-align: center;
+}
+
 .footer strong {
     color: #b53234;
 }
@@ -571,6 +573,12 @@ form textarea {
         border-radius: 0;
         border: none;
         box-shadow: none;
+        backdrop-filter: none;
+        background-color: var(--accent);
+    }
+
+    p {
+        text-align: left;
     }
 }
 
@@ -594,10 +602,6 @@ form textarea {
 /* Phone 600 */
 
 @media only screen and (max-width: 680px) {
-
-    #me p {
-        text-align: left;
-    }
 
     nav .fas {
         display: block;
