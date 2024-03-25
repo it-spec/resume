@@ -80,6 +80,7 @@ a {
     color: var(--text);
     font-size: 18px;
     font-weight: 700;
+    text-shadow: 1px 1px 2px var(--accent);
 }
 
 a:link {
@@ -98,7 +99,7 @@ a:hover {
 
 #me a {
     color: var(--text);
-    text-shadow: 1px 1px 2px var(--accent);
+    /*text-shadow: 1px 1px 2px var(--accent);*/
 }
 
 h1 {
@@ -119,7 +120,7 @@ ul li {
 }
 
 .container {
-    padding: 10px 20%;
+    padding: 10px 10%;
 }
 
 #me {
@@ -135,12 +136,13 @@ ul li {
 #experience,
 #education,
 #personal {
-    /*background-color: var(--accent);*/
+    background-color: var(--accent);
     border-radius: 10px;
     padding: 0px 30px 15px 30px;
-    backdrop-filter: blur(50px);
-    border: 1px solid var(--background);
-    box-shadow: inset 1px 1px 20px #333;
+    /*backdrop-filter: blur(50px);*/
+    border: 1px solid var(--accent);
+    /*box-shadow: inset 1px 1px 20px #333;*/
+    box-shadow: 1px 1px 20px black;
 }
 
 span {
@@ -165,7 +167,8 @@ span {
 #header {
     background-color: var(--accent);
     color: #fff;
-    width: 100%;    
+    width: 100%; 
+    box-shadow: 1px 1px 20px #000000;   
 }
 
 .header-text {
@@ -178,7 +181,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap; 
-    padding: 0px calc(20% + 20px);   
+    padding: 0px calc(10% + 30px);   
 }
 
 nav .logo {
