@@ -68,7 +68,7 @@ accent {
 }
 
 #me p {
-    text-shadow: 0px 0px 4px black, 0px 0px 4px black, 0px 0px 10px black, 0px 0px 20px var(--accent);
+    text-shadow: 0px 0px 4px var(--accent), 0px 0px 4px var(--accent), 0px 0px 10px var(--accent), 0px 0px 20px var(--accent);
 }
 
 p {
